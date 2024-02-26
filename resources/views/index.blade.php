@@ -10,3 +10,9 @@
     </div>
     <button type="submit">Login</button>
 </form>
+
+@if ($errors->any())
+<p>
+    <u>{{ $errors->first() }}</u>
+</p>
+@endif
