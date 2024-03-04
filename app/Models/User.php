@@ -43,8 +43,8 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function features()
+    public function cars()
     {
-        return $this->hasMany(Feature::class, 'user_id');
+        return $this->hasMany(Car::class, 'user_id');
     }
 }
