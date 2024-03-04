@@ -10,9 +10,5 @@
     </div>
     <button type="submit">Login</button>
 </form>
+@include('errors')
 
-@if ($errors->any())
-<p>
-    <u>{{ $errors->first() }}</u>
-</p>
-@endif
