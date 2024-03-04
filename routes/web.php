@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CompleteFeatureController;
 use App\Http\Controllers\CreateFeatureController;
+use App\Http\Controllers\CreateCarController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -31,6 +32,8 @@ Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 
 Route::get('logout', LogoutController::class);
+
+Route::post('/cars', CreateCarController::class)->middleware(('auth'));
 
 Route::post('/features', CreateFeatureController::class)->middleware(('auth'));
 

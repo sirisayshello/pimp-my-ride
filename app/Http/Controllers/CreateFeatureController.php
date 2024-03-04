@@ -19,7 +19,7 @@ class CreateFeatureController extends Controller
 
         $feature = new Feature();
         $feature->description = $request->description;
-        $feature->user_id = Auth::id();
+        $feature->car_id = $request->car_id;
         $feature->completed = false;
         $feature->save();
 
