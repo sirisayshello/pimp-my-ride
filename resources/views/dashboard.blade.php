@@ -1,6 +1,10 @@
+<h1>Pimp my ride</h1>
 <p>Hello, {{ $user->name }}!</p>
 
-<a href="/logout">Logout</a>
+<h2>Your wanted features</h2>
+
+
+
 
 <form method="POST" action="/features" >
 @csrf
@@ -14,7 +18,7 @@
 @foreach($user->features as $feature)
 <li>
 @if($feature->completed)
-    <s>{{ $feature->desciption }}</s>
+    <s>{{ $feature->description }}</s>
     @else
     <form action="/features/{{$feature->id}}/complete" method="post">
         @csrf
@@ -26,3 +30,6 @@
 </li>
 @endforeach
 </ul>
+
+
+<a href="/logout">Logout</a>

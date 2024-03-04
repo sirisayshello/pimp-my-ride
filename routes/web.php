@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompleteFeatureController;
 use App\Http\Controllers\CreateFeatureController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
@@ -32,3 +33,5 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('logout', LogoutController::class);
 
 Route::post('/features', CreateFeatureController::class)->middleware(('auth'));
+
+Route::patch('features/{feature}/complete', CompleteFeatureController::class)->middleware('auth');
