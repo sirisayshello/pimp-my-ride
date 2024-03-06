@@ -11,7 +11,7 @@
         <button type="submit">Add car</button>
 </form>
 
-    
+
         @foreach($user->cars as $car)
         <div>
             <h2>{{ $car->car_description }}</h2>
@@ -22,7 +22,12 @@
                     <input type="text" name="description" id="description">
                     <button type="submit">Add feature</button>
                 </form>
+                <form action="/cars/{{$car->id}}/delete" method="post">
+                    @csrf
+                    @method('patch')
 
+                    <button type="submit">Delete</button>
+                </form>
         </div>
         <div>
             <ul>
@@ -36,6 +41,12 @@
                         @method('patch')
                         {{ $feature->description }}
                         <button type="submit">Complete</button>
+                    </form>
+                    <form action="/features/{{$feature->id}}/delete" method="post">
+                        @csrf
+                        @method('patch')
+
+                        <button type="submit">Delete</button>
                     </form>
                     @endif
                 </li>
