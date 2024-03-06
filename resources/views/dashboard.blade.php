@@ -22,7 +22,12 @@
                     <input type="text" name="description" id="description">
                     <button type="submit">Add feature</button>
                 </form>
+                <form action="/cars/{{$car->id}}/delete" method="post">
+                    @csrf
+                    @method('patch')
 
+                    <button type="submit">Delete</button>
+                </form>
         </div>
         <div>
             <ul>
