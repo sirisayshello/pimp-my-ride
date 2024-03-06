@@ -40,5 +40,7 @@ Route::post('/cars', CreateCarController::class)->middleware(('auth'));
 Route::post('/features', CreateFeatureController::class)->middleware(('auth'));
 
 Route::patch('features/{feature}/complete', CompleteFeatureController::class)->middleware('auth');
+
 Route::patch('features/{feature}/delete', DeleteFeatureController::class)->middleware('auth');
+
 Route::patch('cars/{car}/delete', DeleteCarController::class)->middleware('auth');
