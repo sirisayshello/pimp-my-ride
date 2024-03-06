@@ -4,6 +4,7 @@ use App\Http\Controllers\CompleteFeatureController;
 use App\Http\Controllers\CreateFeatureController;
 use App\Http\Controllers\CreateCarController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeleteFeatureController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +39,4 @@ Route::post('/cars', CreateCarController::class)->middleware(('auth'));
 Route::post('/features', CreateFeatureController::class)->middleware(('auth'));
 
 Route::patch('features/{feature}/complete', CompleteFeatureController::class)->middleware('auth');
+Route::patch('features/{feature}/delete', DeleteFeatureController::class)->middleware('auth');
