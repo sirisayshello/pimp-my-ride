@@ -24,7 +24,7 @@
                 </form>
                 <form action="/cars/{{$car->id}}/delete" method="post">
                     @csrf
-                    @method('patch')
+                    @method('delete')
 
                     <button type="submit">Delete</button>
                 </form>
@@ -44,7 +44,7 @@
                     </form>
                     <form action="/features/{{$feature->id}}/delete" method="post">
                         @csrf
-                        @method('patch')
+                        @method('delete')
 
                         <button type="submit">Delete</button>
                     </form>
