@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif; /* Change 'Arial' to your preferred sans-serif font */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.errors {
+    padding: 12px;
+    width: 100%;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 24px 12px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+}
+
+button,
+a[href="/logout"] {
+    background-color: #04aa6d; /* Green */
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+    padding: 0 12px;
+    width: 100%;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+}
+
+form > div > label {
+    font-weight: bold;
+}
+
+form > div > input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1.5rem;
+}
+
+/* Dashboard ------------------------------------------------------- */
+h2,
+h3 {
+    padding: 0 12px;
+    width: 100%;
+}
+
+.car {
+    margin: 0 12px;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.car > ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.car > ul > li {
+    padding: 6px 0;
+}
+
+.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+}
+
+.feature > form {
+    width: fit-content;
+    padding: 0;
+}
+
+.feature > form > button {
+    font-size: 1rem;
+    padding: 0;
+    background-color: transparent;
+    color: #04aa6d;
+}
+
+a[href="/logout"] {
+    margin: 0 12px;
+}
+
+/* Media query min screen width 800px */
+@media (min-width: 800px) {
+    body {
+        margin: 0 20vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .car {
+        width: 30%;
+    }
+}
