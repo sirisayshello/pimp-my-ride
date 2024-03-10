@@ -1,31 +1,43 @@
 @include('includes.header')
-<h2>{{ $user->name }}'s cars</h2>
+<hr style="border: 6px solid #FFE015; width: 100%;">
+<div class="info">
+    <h3>Register your whip, drop your wishlist, and let's crank up the ride game.</h3>
+</div>
+<section class="intro">
 
-@include('errors')
-<form method="POST" action="/cars" >
-    @csrf
-        <div>
-            <label for="car_description">Car name</label>
-            <input type="text" name="car_description" id="car_description">
-        </div>
-        <button type="submit"><i class="fa-solid fa-plus"></i> Add car</button>
-</form>
+    @include('errors')
+    @if(count($user->cars) > 0)
+    <h2>{{ $user->name }}'s cars</h2>
+    @else
+    <h2>Hit us with a ride to get started!</h2>
+    @endif
+    <form method="POST" action="/cars" >
+        @csrf
+            <div>
+                <h3>Throw that ride in the mix</h3>
+                <label for="car_description"></label>
+                <input type="text" name="car_description" id="car_description" placeholder="Cruise Handle">
+            </div>
+            <button type="submit"><i class="fa-solid fa-plus"></i> Add ride</button>
+    </form>
+</section>
 
 <section class="cars">
+
 @foreach($user->cars as $car)
     <div class="car">
         <h3><i class="fa-solid fa-car"></i> {{ $car->car_description }}</h3>
         <form action="/cars/{{$car->id}}/delete" method="post">
             @csrf
             @method('delete')
-            <button type="submit"><i class="fa-solid fa-minus"></i> Delete car</button>
+            <button type="submit"><i class="fa-solid fa-minus"></i> Delete ride</button>
         </form>
         <form method="POST" action="/features" >
             @csrf
             <input type="hidden" id="car_id" name="car_id" value="{{ $car->id }}">
             <div>
-                <label for="description">Feature description</label>
-                <input type="text" name="description" id="description">
+                <label for="description"></label>
+                <input type="text" name="description" id="description" placeholder="Pimp Specs">
             </div>
             <button type="submit"><i class="fa-solid fa-plus"></i> Add feature</button>
         </form>
