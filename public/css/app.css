@@ -29,7 +29,7 @@ header {
 
 button,
 a[href="/logout"] {
-    background-color: #ed52cb; /* Green */
+    background-color: #ed52cb;
     border: none;
     border-radius: 3px;
     color: white;
@@ -81,7 +81,7 @@ h4 {
     width: 100%;
 }
 
-.info{
+.info {
     background-color: #ed52cb;
     width: 100%;
     padding: 24px;
@@ -101,7 +101,7 @@ h4 {
 }
 
 .intro > form {
-    padding: 12px 0
+    padding: 12px 0;
 }
 
 .cars {
@@ -110,7 +110,7 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    background-color: #FFE015;
+    background-color: #ffe015;
 }
 
 .car {
@@ -177,5 +177,10 @@ a[href="/logout"] {
 
     .car {
         width: calc(33% - 4px);
+    }
+
+    form > div > input {
+        width: 100%;
+        max-width: 31vw;
     }
 }
