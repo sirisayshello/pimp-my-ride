@@ -17,7 +17,7 @@ This project is an assignment in Laravel development, for first-year web develop
 4. Configure settings in `.env` file. See `.env.example`: Open the .env file and update the database connection settings (DB_DATABASE, DB_USERNAME, DB_PASSWORD) to match your local MySQL server configuration.
 5. Generate Application Key: Run php artisan key:generate to generate a new application key for your project. This key is used for encryption and should be kept secret.
 6. Configure Database Settings: Run `php artisan migrate` to create the necessary tables in your database.
-7. Start the Laravel Development Server: Finally, run php artisan serve to start the Laravel development server. You can access the project by navigating to http://localhost:8000 in your web browser.
+7. Start the Laravel Development Server: Finally, run `php artisan serve` to start the Laravel development server. You can access the project by navigating to http://localhost:8000 in your web browser.
 
 ### Install PHP on macOS
 
